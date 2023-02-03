@@ -1,12 +1,14 @@
-import { Box } from '@mui/material';
+import { Stack } from '@mui/material';
 import React from 'react';
+import FootCategory from '../FoodCategory/FootCategory';
 import Header from '../Header/Header';
 
 const Home = () => {
     return (
-        <Box>
+        <Stack spacing={5}>
             <Header />
-        </Box>
+            <FootCategory />
+        </Stack>
     );
 };
 
