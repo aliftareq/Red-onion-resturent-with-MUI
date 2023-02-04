@@ -34,13 +34,13 @@ const FootCategory = () => {
                 >
                     {!loading && meals?.data?.map((meal, idx) => <FoodCard key={idx} meal={meal} />)}
 
-                    <Button
+                    {/* <Button
                         sx={{
                             borderRadius: '4px',
                         }}
                     >
                         Checkout Your Food
-                    </Button>
+                    </Button> */}
 
                     {loading &&
                         Array.from(new Array(6)).map((item, idx) => (
