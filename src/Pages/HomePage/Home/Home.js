@@ -1,5 +1,6 @@
 import { Stack } from '@mui/material';
 import React from 'react';
+import Features from '../Features/Features';
 import FootCategory from '../FoodCategory/FootCategory';
 import Header from '../Header/Header';
 
@@ -8,6 +9,7 @@ const Home = () => {
         <Stack spacing={5}>
             <Header />
             <FootCategory />
+            <Features />
         </Stack>
     );
 };

@@ -1,9 +1,10 @@
-import { Box, Container, Skeleton } from '@mui/material';
+import { Box, Button, Container, Skeleton, Typography } from '@mui/material';
 import React from 'react';
 import TabButton from '../../../Components/Custom/TabButton';
+import FoodCard from '../../../Components/FoodCard/FoodCard';
 import useMeals from '../../../Hooks/useMeals';
 
-const categories = ['breakfast', 'lunch', 'dinner'];
+const categories = ['breakfast', 'launch', 'dinner'];
 
 const FootCategory = () => {
     const [value, setValue] = React.useState(0);
@@ -31,7 +32,15 @@ const FootCategory = () => {
                         mt: 8,
                     }}
                 >
-                    {/* {!loading && meals.map((meal, idx) => <FoodCard key={idx} meal={meal} />)} */}
+                    {!loading && meals?.data?.map((meal, idx) => <FoodCard key={idx} meal={meal} />)}
+
+                    <Button
+                        sx={{
+                            borderRadius: '4px',
+                        }}
+                    >
+                        Checkout Your Food
+                    </Button>
 
                     {loading &&
                         Array.from(new Array(6)).map((item, idx) => (

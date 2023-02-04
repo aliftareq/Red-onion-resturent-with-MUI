@@ -62,7 +62,7 @@ const FoodCard = ({ meal }) => {
                     }}
                     variant='h5'
                 >
-                    ${meal.price}
+                    ${meal.Price}
                 </Typography>
             </Box>
         </Box>
