@@ -1,16 +1,22 @@
-import { Avatar, Box, Button, Container, IconButton, Stack } from '@mui/material';
+import { Avatar, Badge, Box, Button, Container, IconButton, Stack } from '@mui/material';
 import React from 'react';
 import logo from '../../Assets/images/logo2.png'
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import { FlexBox } from '../StyledComponents/FlexBox';
 import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '../../Hooks/useAuth';
+import { useCart } from '../../Hooks/useCart';
 
 const NavBar = () => {
+
+    //context / hooks
     const { user, logoutUser } = useAuth()
-    console.log(user);
+    const { cart } = useCart()
+    console.log(user, cart);
+
     const navigate = useNavigate()
 
+    //handlers
     const handleLogOut = () => {
         logoutUser(navigate)
     }
@@ -28,9 +34,9 @@ const NavBar = () => {
                             }} />
                     </Box>
                     <Stack direction='row' spacing={4}>
-                        <IconButton>
+                        <Badge badgeContent={cart?.reduce((acc, cart) => acc += cart.quantity, 0)} color="primary">
                             <ShoppingCartOutlinedIcon />
-                        </IconButton>
+                        </Badge>
                         {
                             !user ?
                                 <>
