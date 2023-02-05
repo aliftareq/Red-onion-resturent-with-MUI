@@ -71,9 +71,11 @@ const useFirebase = () => {
     }
 
     //@ logout user 
-    const logoutUser = () => {
+    const logoutUser = (navigate) => {
         signOut(auth).then(() => {
             console.log('user logged out');
+            //redirect to home page
+            navigate('/login')
         })
     }
 
@@ -82,7 +84,7 @@ const useFirebase = () => {
         const unSubscribe = onAuthStateChanged(auth, (user) => {
             if (user) {
                 setUser(user)
-                console.log(user);
+                //console.log(user);
             }
             else {
                 setUser(null)

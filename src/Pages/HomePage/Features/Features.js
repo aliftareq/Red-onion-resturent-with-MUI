@@ -58,8 +58,8 @@ const Features = () => {
                         mt: 8,
                     }}
                 >
-                    {featuresCardData.map((feature) => (
-                        <FeatureCard feature={feature} />
+                    {featuresCardData.map((feature, idx) => (
+                        <FeatureCard key={idx} feature={feature} />
                     ))}
                 </Box>
             </Container>
