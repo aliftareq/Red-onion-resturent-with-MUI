@@ -34,7 +34,18 @@ const NavBar = () => {
                             }} />
                     </Box>
                     <Stack direction='row' spacing={4}>
-                        <Badge badgeContent={cart?.reduce((acc, cart) => acc += cart.quantity, 0)} color="primary">
+                        <Badge
+                            badgeContent={cart?.reduce((acc, cart) => acc += cart.quantity, 0)} color="primary"
+                            onClick={() => navigate('/checkout')}
+                            sx={{
+                                cursor: 'pointer',
+                                '& > svg': {
+                                    '&:hover': {
+                                        color: 'primary.main'
+                                    }
+                                }
+                            }}
+                        >
                             <ShoppingCartOutlinedIcon />
                         </Badge>
                         {
@@ -51,6 +62,14 @@ const NavBar = () => {
                                 </>
                                 :
                                 <>
+                                    {/* <Button
+                                        variant='text'
+                                        sx={{ color: '#191919' }}
+                                        to='/checkout'
+                                        component={Link}
+                                    >
+                                        Checkout
+                                    </Button> */}
                                     <Avatar title={user?.displayName} alt="Remy Sharp"
                                         src="https://img.freepik.com/premium-vector/avatar-portrait-young-caucasian-boy-man-round-frame-vector-cartoon-flat-illustration_551425-19.jpg?w=2000" />
                                     <Button onClick={handleLogOut}>
