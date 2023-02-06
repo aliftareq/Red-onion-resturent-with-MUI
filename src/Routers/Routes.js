@@ -5,6 +5,7 @@ import LoginPage from "../Pages/AuthenticationPage/LoginPage/LoginPage";
 import SignUP from "../Pages/AuthenticationPage/SignUpPage/SignUP";
 import Home from "../Pages/HomePage/Home/Home";
 import MealDetails from "../Pages/MealDetails/MealDetails";
+import OrderStatus from "../Pages/OrderStatus/OrderStatus";
 import PrivateRoute from "./PrivateRoute";
 
 export const router = createBrowserRouter([
@@ -28,6 +29,10 @@ export const router = createBrowserRouter([
             {
                 path: '/meal-details/:mealId',
                 element: <PrivateRoute><MealDetails /></PrivateRoute>
+            },
+            {
+                path: '/order-status',
+                element: <OrderStatus />
             },
         ]
     }

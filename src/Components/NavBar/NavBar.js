@@ -2,10 +2,10 @@ import { Avatar, Badge, Box, Button, Container, IconButton, Stack } from '@mui/m
 import React from 'react';
 import logo from '../../Assets/images/logo2.png'
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
-import { FlexBox } from '../StyledComponents/FlexBox';
 import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '../../Hooks/useAuth';
 import { useCart } from '../../Hooks/useCart';
+import { FlexBox } from '../Styled/Flexbox';
 
 const NavBar = () => {
 

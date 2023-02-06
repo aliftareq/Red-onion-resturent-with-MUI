@@ -1,7 +1,7 @@
 import React from 'react';
 import { Box, Container, styled, Typography } from '@mui/material';
 import Link from '@mui/material/Link';
-import { FlexBox } from '../StyledComponents/FlexBox';
+import { FlexBox } from '../Styled/Flexbox';
 
 const MenuBox = styled(Box)(({ theme }) => ({
     display: 'flex',

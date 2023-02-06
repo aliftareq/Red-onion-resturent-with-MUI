@@ -1,7 +1,6 @@
 import { Box, Button, Container, Stack, Typography } from '@mui/material';
 import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { FlexBox } from '../../Components/StyledComponents/FlexBox';
 import useMealById from '../../Hooks/useMealById';
 import AddIcon from '@mui/icons-material/Add';
 import RemoveIcon from '@mui/icons-material/Remove';
@@ -11,6 +10,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import ImageSlider from '../../Components/ImageSlider/ImageSlider';
 import { useCart } from '../../Hooks/useCart';
+import { FlexBox } from '../../Components/Styled/Flexbox';
 
 const MealDetails = () => {
     const { mealId } = useParams();
